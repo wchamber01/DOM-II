@@ -19,6 +19,14 @@ busImg.addEventListener('mouseleave', () => {
 
 
 
+//**********BEGIN WHEEL EVENT**********//
+busImg.addEventListener('wheel', () => {
+    busImg.style.visibility = 'hidden';
+})
+//**********END WHEEL EVENT**********//
+
+
+
 //**********BEGIN SCROLL EVENT**********//
 const adventureImg = document.querySelector('#adventure');
 window.addEventListener('scroll', () => {
@@ -30,18 +38,18 @@ window.addEventListener('scroll', () => {
 
 
 //**********BEGIN CURSOR EVENT**********//
-// const cursor = window.style.cursor;
-// window.addEventListener('mousemove', () => {
-// window.style.cursor = 'img/plane.svg';
-// })
+const cursor = window.style.cursor;
+cursor.addEventListener('mousemove', () => {
+cursor.style.cursor = 'img/plane.svg';
+})
 //**********END CURSOR EVENT**********//
 
 
 
 //**********BEGIN RESIZE EVENT**********//
-const dark = document.body.style.backgroundColor;
-window.addEventListener('resize', () => {
-    document.body.style.backgroundColor = rgba(0,0,0,0.5)
+const dark = document.body;
+window.addEventListener('onresize', () => {
+    dark.style.backgroundColor = 'red'
 })
 //**********END RESIZE EVENT**********//
 
@@ -63,3 +71,4 @@ island.addEventListener('click', () => {
     document.querySelector('#destination').src = 'https://images.unsplash.com/photo-1529815481058-55e5b656f6d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80'
 })
 //**********END CLICK EVENT**********//
+
